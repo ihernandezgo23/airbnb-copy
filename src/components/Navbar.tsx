@@ -4,7 +4,7 @@ export const Navbar = () => {
   const [selected, setSelected] = useState("Alojamientos");
 
   return (
-    <header className="flex flex-wrap justify-between items-center px-5 py-3 border-b">
+    <header className="flex flex-wrap justify-between items-center px-5 py-3">
       {/* Logo */}
       <a href="/">
         <img
