@@ -1,42 +1,27 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+@font-face {
+  font-family: cereal;
+  src: url('../src/assets/Airbnb Cereal-fontiko/AirbnbCereal_W_Bk.otf');
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  font-family: cereal;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo, #logo-mini {
+  height: 40px;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#browser {
+  height: 30px;
 }
 
-.card {
-  padding: 2em;
+#menu {
+  height: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+#user {
+  height: 25px;
 }
