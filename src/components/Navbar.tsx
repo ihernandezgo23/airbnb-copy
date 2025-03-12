@@ -21,6 +21,14 @@ export const Navbar = ({ language, changeLanguage }: { language: string, changeL
     }
   };
 
+  const handleLanguageChange = (lang: string) => {
+    if (translations[lang]) {
+      changeLanguage(lang);
+    } else {
+      console.error("Idioma no disponible");
+    }
+  };
+
   return (
     <header className="flex flex-wrap justify-between items-center px-5 py-3">
       {/* Logo */}
@@ -52,19 +60,19 @@ export const Navbar = ({ language, changeLanguage }: { language: string, changeL
         <div className="relative" id="browser-container">
           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1 focus:outline-none">
             <img id="browser" src="/icons8-browser-100.png" className="h-6" alt="Browser" />
-            <span className="text-sm font-medium">{language}</span>
+            <span className="text-sm font-medium">{language === 'ESP' ? 'ESP' : 'EN'}</span>
           </button>
 
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-28 bg-white border rounded-lg shadow-lg">
               <ul className="py-2 text-gray-700">
                 <li>
-                  <button onClick={() => changeLanguage("ESP")} className="w-full text-left px-4 py-2 hover:bg-gray-100">
+                  <button onClick={() => handleLanguageChange("ESP")} className="w-full text-left px-4 py-2 hover:bg-gray-100">
                     {translations["ESP"].esp}
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => changeLanguage("EN")} className="w-full text-left px-4 py-2 hover:bg-gray-100">
+                  <button onClick={() => handleLanguageChange("EN")} className="w-full text-left px-4 py-2 hover:bg-gray-100">
                     {translations["EN"].en}
                   </button>
                 </li>
