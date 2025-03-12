@@ -48,12 +48,14 @@ function App() {
         ))}
       </div>
 
-      <button
-        className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center gap-2"
-      >
-        Ver Mapa
-        <img src="/icons8-map-48.png" alt="Mapa" className="w-6 h-6" />
-      </button>
+      <a href="/map">
+        <button
+          className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center gap-2"
+        >
+          Ver Mapa
+          <img src="/icons8-map-48.png" alt="Mapa" className="w-6 h-6" />
+        </button>
+      </a>
     </>
   );
 }
