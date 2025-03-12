@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import './App.css';
 
 import { Navbar } from './components/Navbar';
@@ -17,18 +16,24 @@ function App() {
   }
 
   const [houses, setHouses] = useState<House[]>([]);
+  const [language, setLanguage] = useState<string>('ESP');
 
   useEffect(() => {
-    fetch('/api/houses.json') // Asegúrate de que el archivo JSON esté en la carpeta pública
+    fetch('/api/houses.json') 
       .then(response => response.json())
       .then(data => setHouses(data))
       .catch(error => console.error('Error:', error));
   }, []);
 
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+  };
+
   return (
     <>
-      <Navbar />
-      <Search />
+      <Navbar language={language} changeLanguage={changeLanguage} />
+      <Search language={language} />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10">
         {houses.map((house, index) => (
           <HouseCard
@@ -48,7 +53,7 @@ function App() {
       >
         Ver Mapa
         <img src="/icons8-map-48.png" alt="Mapa" className="w-6 h-6" />
-    </button>
+      </button>
     </>
   );
 }
