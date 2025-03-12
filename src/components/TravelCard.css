@@ -1,0 +1,39 @@
+.travel-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .travel-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .travel-info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .travel-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .travel-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffcc00;
+  }
+  
+  .rating span {
+    margin-right: 5px;
+  }

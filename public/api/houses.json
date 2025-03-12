@@ -1,0 +1,42 @@
+[
+    {
+      "imageSrc": "https://photos.zillowstatic.com/fp/088b08c95c1a010e1ae5db4208cea334-p_e.jpg",
+      "location": "Malibú, California",
+      "distance": "A 10 km del centro",
+      "dates": "15-20 de abril",
+      "price": "250€/noche",
+      "rating": "4.8"
+    },
+    {
+      "imageSrc": "https://pictures.escapia.com/ASPNSG/260558/9662020391.jpg",
+      "location": "Aspen, Colorado",
+      "distance": "A 5 km del centro",
+      "dates": "10-15 de mayo",
+      "price": "300€/noche",
+      "rating": "4.9"
+    },
+    {
+      "imageSrc": "https://i.ytimg.com/vi/qy5WH7hEMjs/sddefault.jpg",
+      "location": "Banff, Canadá",
+      "distance": "A 8 km del centro",
+      "dates": "5-10 de junio",
+      "price": "200€/noche",
+      "rating": "4.7"
+    },
+    {
+      "imageSrc": "https://img-v2.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fm.sothebysrealty.com%2F977i215%2Fpkemcc4ffwhymgp6bxkxpnagp7i215&option=N&permitphotoenlargement=false",
+      "location": "París, Francia",
+      "distance": "A 2 km de la Torre Eiffel",
+      "dates": "20-25 de julio",
+      "price": "400€/noche",
+      "rating": "4.9"
+    },
+    {
+      "imageSrc": "https://txc5xc6e.cdn.imgeng.in/custom/01505/foto/20230612135834-40.jpg",
+      "location": "Lago di Como, Italia",
+      "distance": "A 3 km del lago",
+      "dates": "1-6 de septiembre",
+      "price": "350€/noche",
+      "rating": "4.8"
+    }
+]  

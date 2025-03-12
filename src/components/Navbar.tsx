@@ -8,7 +8,7 @@ export const Navbar = () => {
       {/* Logo */}
       <a href="/">
         <img
-          src="src/assets/logo.png"
+          src="/logo.png"
           alt="airbnb logo"
           className="h-10"
         />
@@ -33,11 +33,11 @@ export const Navbar = () => {
       {/* Derecha */}
       <div className="flex gap-5 items-center">
         <h3>Pon tu casa en Airbnb</h3>
-        <img id="browser" src="src/assets/icons8-browser-100.png" className="h-6" />
+        <img id="browser" src="/icons8-browser-100.png" className="h-6" />
 
         <div className="flex gap-2 p-2 items-center border rounded-full">
-          <img id="menu" src="src/assets/icons8-menu-100.png" className="h-5" />
-          <img id="user" src="src/assets/icons8-user-60.png" className="h-6 pl-1" />
+          <img id="menu" src="/icons8-menu-100.png" className="h-5" />
+          <img id="user" src="/icons8-user-60.png" className="h-6 pl-1" />
         </div>
       </div>
     </header>
