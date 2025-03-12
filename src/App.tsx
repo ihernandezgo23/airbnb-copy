@@ -15,16 +15,25 @@ function App() {
   }
 
   const [houses, setHouses] = useState<House[]>([]);
-  const [visibleHouses, setVisibleHouses] = useState<number>(4); // Limit to 8 houses initially
-  const [language, setLanguage] = useState<string>('ESP');
+  const [visibleHouses, setVisibleHouses] = useState<number>(4);
+  const [language, setLanguage] = useState<string>(() => {
+    return localStorage.getItem("language") || "ESP"; // Cargar idioma desde localStorage
+  });
 
-  // Función para cambiar el idioma
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  // Función para cambiar el idioma y guardarlo en localStorage
   const changeLanguage = (lang: string) => {
     console.log(`Cambiando idioma a: ${lang}`);
     setLanguage(lang);
+    localStorage.setItem("language", lang);
   };
 
-  // Cargar las casas desde el archivo JSON
   useEffect(() => {
     fetch('/api/houses.json')
       .then(response => response.json())
@@ -32,32 +41,23 @@ function App() {
       .catch(error => console.error('Error:', error));
   }, []);
 
-  // Función para traducir texto del botón según el idioma
   const getButtonText = (key: 'showMore' | 'seeMap') => {
     const translations: { [key: string]: { showMore: string; seeMap: string } } = {
       ESP: {
         showMore: 'Más casas',
         seeMap: 'Ver Mapa',
       },
-      ENG: {
+      EN: {
         showMore: 'Show More',
         seeMap: 'See Map',
       },
     };
-
-    // Fallback a ESP si el idioma no existe
     return translations[language] ? translations[language][key] : translations['ESP'][key];
   };
 
-  // Función para cargar más casas
   const loadMoreHouses = () => {
     setVisibleHouses(prev => Math.min(prev + 8, houses.length));
   };
-
-  // Effect to force re-render when language changes
-  useEffect(() => {
-    // Triggers a re-render when the language changes
-  }, [language]);
 
   return (
     <>

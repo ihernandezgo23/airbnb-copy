@@ -60,7 +60,7 @@ export const Navbar = ({ language, changeLanguage }: { language: string, changeL
         <div className="relative" id="browser-container">
           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1 focus:outline-none">
             <img id="browser" src="/icons8-browser-100.png" className="h-6" alt="Browser" />
-            <span className="text-sm font-medium">{language === 'ESP' ? 'ESP' : 'EN'}</span>
+            <span className="text-sm font-medium">{language === "ESP" ? translations[language].esp : translations[language].en}</span>
           </button>
 
           {isDropdownOpen && (
